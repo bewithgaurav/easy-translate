@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Translate</title>
+</head>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+<script type="text/javascript">
+	var host='{{host}}';
+</script>
+<script type="text/javascript" src="{% static "jquery-3.2.1.min.js" %}"></script>
+<script type="text/javascript" src="{% static "main.js" %}"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body>
+<center>
+<br><br>
+<textarea id="inputText" type="text"></textarea>
+<br><br>
+<input type="radio" name="fromto" value="hi">English To Hindi<br>
+<input type="radio" name="fromto" value="en">Hindi To English
+
+<br><br>
+
+<div class="container">
+	<div class="col-md-6">
+		<button type="button" id="sendTranslate" class="btn btn-info">Translate the Text</button>
+	</div>
+	<div class="col-md-6">
+		<button type="button" id="startVoice" class="btn btn-info">Start Voice</button>
+	</div>
+</div>
+<br><br><br>
+<font size="20px">
+<div id="result"></div>
+</font>
+<font size="10px">
+<div id="voiceResults"></div>
+</font>
+<font size="10px">
+<div id="translatedVoiceResults"></div>
+</font>
+</center>
+</body>
+</html>
